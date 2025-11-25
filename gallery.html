@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Sai Banquet Hall - Gallery</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ... ALL THE ORIGINAL CSS FROM YOUR INPUT ... */
+        
+        /* Gallery Section (The core content for this page) */
+        .gallery {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .gallery h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 1.2;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-btn {
+            background: #FF8C00;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-btn:hover {
+            background: #FF7F00;
+            transform: translateY(-2px);
+        }
+        
+        /* ... INCLUDE ALL OTHER SECTION CSS STYLES HERE ... */
+    </style>
+</head>
+<body>
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+            
+            <button class="mobile-menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button"><i class="fas fa-calendar-check"></i>Availability</a>
+                <a href="about.html" class="nav-button"><i class="fas fa-info-circle"></i>About</a>
+                <a href="gallery.html" class="nav-button"><i class="fas fa-images"></i>Gallery</a>
+                <a href="videos.html" class="nav-button"><i class="fas fa-video"></i>Videos</a>
+                <a href="testimonials.html" class="nav-button"><i class="fas fa-star"></i>Reviews</a>
+                <a href="contact.html" class="nav-button"><i class="fas fa-map-marker-alt"></i>Contact</a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button"><i class="fas fa-calendar-check"></i>Availability</a>
+            <a href="about.html" class="nav-button"><i class="fas fa-info-circle"></i>About</a>
+            <a href="gallery.html" class="nav-button"><i class="fas fa-images"></i>Gallery</a>
+            <a href="videos.html" class="nav-button"><i class="fas fa-video"></i>Videos</a>
+            <a href="testimonials.html" class="nav-button"><i class="fas fa-star"></i>Reviews</a>
+            <a href="contact.html" class="nav-button"><i class="fas fa-map-marker-alt"></i>Contact</a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2>A Glimpse of Grandeur</h2>
+                <p class="section-subtitle">Explore photos from past events, showcasing our versatility and beautiful décor options.</p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1549488344-933390890532?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Wedding reception setup">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Engagement ceremony decor">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mandap and seating area">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c7c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Birthday party arrangement">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1549488344-933390890532?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Corporate event setup">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Catering display area">
+                    </div>
+                </div>
+
+                <button class="gallery-btn">
+                    <i class="fas fa-camera-retro"></i>
+                    View Complete Photo Album (50+ Images)
+                </button>
+            </div>
+        </section>
+        
+        </main>
+
+    <script>
+        // Keep the JavaScript for the fixed header and mobile menu here
+        window.onscroll = function() {
+            const nav = document.getElementById("topNav");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        };
+
+        // Mobile menu toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        });
+
+        function contactWhatsApp() {
+            alert('Redirecting to WhatsApp for booking inquiry...');
+        }
+    </script>
+</body>
+</html>
