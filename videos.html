@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Sai Banquet Hall - Videos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ... ALL THE ORIGINAL CSS FROM YOUR INPUT ... */
+        
+        /* Videos Section (The core content for this page) */
+        .videos {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .videos h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-container h3 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 69, 19, 0.8);
+            color: white;
+            padding: 15px;
+            margin: 0;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .video-cta {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        /* ... INCLUDE ALL OTHER SECTION CSS STYLES HERE ... */
+    </style>
+</head>
+<body>
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+            
+            <button class="mobile-menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button"><i class="fas fa-calendar-check"></i>Availability</a>
+                <a href="about.html" class="nav-button"><i class="fas fa-info-circle"></i>About</a>
+                <a href="gallery.html" class="nav-button"><i class="fas fa-images"></i>Gallery</a>
+                <a href="videos.html" class="nav-button"><i class="fas fa-video"></i>Videos</a>
+                <a href="testimonials.html" class="nav-button"><i class="fas fa-star"></i>Reviews</a>
+                <a href="contact.html" class="nav-button"><i class="fas fa-map-marker-alt"></i>Contact</a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button"><i class="fas fa-calendar-check"></i>Availability</a>
+            <a href="about.html" class="nav-button"><i class="fas fa-info-circle"></i>About</a>
+            <a href="gallery.html" class="nav-button"><i class="fas fa-images"></i>Gallery</a>
+            <a href="videos.html" class="nav-button"><i class="fas fa-video"></i>Videos</a>
+            <a href="testimonials.html" class="nav-button"><i class="fas fa-star"></i>Reviews</a>
+            <a href="contact.html" class="nav-button"><i class="fas fa-map-marker-alt"></i>Contact</a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+        </div>
+    </nav>
+    
+    <main>
+        <section class="videos" id="videos">
+            <div class="container">
+                <h2>Virtual Venue Tour & Event Highlights</h2>
+                <p class="section-subtitle">Experience the ambiance and scale of Om Sai Banquet Hall through our highlight reel.</p>
+
+                <div class="videos-grid">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/example1" allowfullscreen></iframe>
+                        <h3>Grand Wedding Reception Highlight</h3>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/example2" allowfullscreen></iframe>
+                        <h3>Venue Setup Walkthrough (Virtual Tour)</h3>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/example3" allowfullscreen></iframe>
+                        <h3>Birthday & Corporate Events Showcase</h3>
+                    </div>
+                </div>
+
+                <div class="video-cta">
+                    <h3>Want to see your event here?</h3>
+                    <p>Contact us to discuss your vision and let us capture your perfect day!</p>
+                    <button class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Talk to an Event Specialist</button>
+                </div>
+            </div>
+        </section>
+        
+        </main>
+
+    <script>
+        // Keep the JavaScript for the fixed header and mobile menu here
+        window.onscroll = function() {
+            const nav = document.getElementById("topNav");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        };
+
+        // Mobile menu toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        });
+
+        function contactWhatsApp() {
+            alert('Redirecting to WhatsApp for booking inquiry...');
+        }
+    </script>
+</body>
+</html>
