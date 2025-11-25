@@ -6,15 +6,302 @@
     <title>Om Sai Banquet Hall - Home</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
     <style>
-        /* ... ALL THE ORIGINAL CSS FROM YOUR INPUT ... */
-        /* IMPORTANT: Remove the 'scroll-margin-top' rules from the CSS for all sections. */
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 69, 19, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .top-nav.scrolled {
+            background: rgba(139, 69, 19, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .nav-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .nav-button i {
+            font-size: 0.8rem;
+        }
+
+        .nav-button.whatsapp {
+            background: #25D366;
+            border-color: #25D366;
+        }
+
+        .nav-button.whatsapp:hover {
+            background: #1da851;
+            border-color: #1da851;
+        }
+
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(139, 69, 19, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav .nav-button {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        /* Hero Section - The content for this page */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            /* Placeholder Image for the background */
+            background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(139, 69, 19, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 40px;
+        }
+
+        .premium-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature i {
+            font-size: 2rem;
+            color: #FFD700;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1da851;
+            transform: translateY(-2px);
+        }
+
+        .availability-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .features {
+                gap: 20px;
+            }
+
+            .nav-buttons {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="top-nav" id="topNav">
         <div class="nav-container">
             <a href="index.html" class="logo">Om Sai Banquets</a>
+            
+            <button class="mobile-menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
             
             <div class="nav-buttons">
                 <a href="availability.html" class="nav-button"><i class="fas fa-calendar-check"></i>Availability</a>
@@ -25,9 +312,17 @@
                 <a href="contact.html" class="nav-button"><i class="fas fa-map-marker-alt"></i>Contact</a>
                 <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()"><i class="fab fa-whatsapp"></i>WhatsApp</a>
             </div>
-
-            </div>
-        </nav>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button"><i class="fas fa-calendar-check"></i>Availability</a>
+            <a href="about.html" class="nav-button"><i class="fas fa-info-circle"></i>About</a>
+            <a href="gallery.html" class="nav-button"><i class="fas fa-images"></i>Gallery</a>
+            <a href="videos.html" class="nav-button"><i class="fas fa-video"></i>Videos</a>
+            <a href="testimonials.html" class="nav-button"><i class="fas fa-star"></i>Reviews</a>
+            <a href="contact.html" class="nav-button"><i class="fas fa-map-marker-alt"></i>Contact</a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+        </div>
+    </nav>
     
     <section class="hero" id="home">
         <div class="hero-overlay"></div>
@@ -50,16 +345,25 @@
     </section>
 
     <script>
-        // Keep the JavaScript for the fixed header and mobile menu here
+        // 1. Fixed Header Scroll Effect (Adding 'scrolled' class)
         window.onscroll = function() {
+            const nav = document.getElementById("topNav");
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                document.getElementById("topNav").classList.add("scrolled");
+                nav.classList.add("scrolled");
             } else {
-                document.getElementById("topNav").classList.remove("scrolled");
+                nav.classList.remove("scrolled");
             }
         };
 
+        // 2. Mobile Menu Toggle Functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        });
+
+        // 3. WhatsApp Contact Function
         function contactWhatsApp() {
+            // In a real scenario, you would replace this with a link to WhatsApp
+            // window.location.href = 'https://wa.me/919999999999?text=Hello%20Om%20Sai%20Banquets...';
             alert('Redirecting to WhatsApp for booking inquiry...');
         }
     </script>
