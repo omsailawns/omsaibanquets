@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Sai Banquets - About</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button">
+                    <i class="fas fa-calendar-check"></i>
+                    Availability
+                </a>
+                <a href="about.html" class="nav-button">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+                <a href="gallery.html" class="nav-button">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="videos.html" class="nav-button">
+                    <i class="fas fa-video"></i>
+                    Videos
+                </a>
+                <a href="reviews.html" class="nav-button">
+                    <i class="fas fa-star"></i>
+                    Reviews
+                </a>
+                <a href="contact.html" class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Contact
+                </a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-calendar-check"></i>
+                Availability
+            </a>
+            <a href="about.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="gallery.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="videos.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-video"></i>
+                Videos
+            </a>
+            <a href="reviews.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-star"></i>
+                Reviews
+            </a>
+            <a href="contact.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-map-marker-alt"></i>
+                Contact
+            </a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp(); closeMobileMenu()">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Our Hall</h2>
+            <h3 class="about-subtitle">Where Memories Are Made</h3>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Our elegant banquet hall combines timeless sophistication with modern amenities to create the perfect setting for your special occasion. From intimate gatherings to grand celebrations, our versatile space adapts to your vision while maintaining an atmosphere of refined luxury.</p>
+
+                    <p>With attention to every detail and a commitment to excellence, we ensure your event becomes an unforgettable experience for you and your guests.</p>
+
+                    <h4>Hall Features & Amenities</h4>
+
+                    <div class="amenities-grid">
+                        <div class="amenity">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>Capacity</strong>
+                                <span>1000+ Guests</span>
+                            </div>
+                        </div>
+                        <div class="amenity">
+                            <i class="fas fa-snowflake"></i>
+                            <div>
+                                <strong>Climate Control</strong>
+                                <span>Cooling AC</span>
+                            </div>
+                        </div>
+                        <div class="amenity">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <strong>Parking</strong>
+                                <span>Ample Space</span>
+                            </div>
+                        </div>
+                        <div class="amenity">
+                            <i class="fas fa-volume-up"></i>
+                            <div>
+                                <strong>Sound System</strong>
+                                <span>Professional Audio</span>
+                            </div>
+                        </div>
+                        <div class="amenity">
+                            <i class="fas fa-theater-masks"></i>
+                            <div>
+                                <strong>Stage</strong>
+                                <span>Elevated Platform</span>
+                            </div>
+                        </div>
+                        <div class="amenity">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong>Lighting</strong>
+                                <span>Ambient & Mood</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image">
+                    <img src="newfront.jpg" alt="Modern banquet hall with large glass windows and warm lighting, featuring a symmetrical architectural design and layered rooflines. Two people walk near the entrance, which is surrounded by landscaped greenery and trees. The scene is set at dusk, creating a welcoming and elegant atmosphere with a sense of anticipation and celebration. No visible text is present in the image.">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

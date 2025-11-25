@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Sai Banquets - Videos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button">
+                    <i class="fas fa-calendar-check"></i>
+                    Availability
+                </a>
+                <a href="about.html" class="nav-button">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+                <a href="gallery.html" class="nav-button">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="videos.html" class="nav-button">
+                    <i class="fas fa-video"></i>
+                    Videos
+                </a>
+                <a href="reviews.html" class="nav-button">
+                    <i class="fas fa-star"></i>
+                    Reviews
+                </a>
+                <a href="contact.html" class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Contact
+                </a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-calendar-check"></i>
+                Availability
+            </a>
+            <a href="about.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="gallery.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="videos.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-video"></i>
+                Videos
+            </a>
+            <a href="reviews.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-star"></i>
+                Reviews
+            </a>
+            <a href="contact.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-map-marker-alt"></i>
+                Contact
+            </a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp(); closeMobileMenu()">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Videos Section -->
+    <section class="videos">
+        <div class="container">
+            <h2>Experience Our Hall</h2>
+            <p class="section-subtitle">Watch these videos to see our banquet hall in action during real events</p>
+
+            <div class="videos-grid">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="omsaibanquetvideo.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EXAMPLE3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-cta">
+                <h3>Want to see more videos of our events?</h3>
+                <button class="whatsapp-btn" onclick="contactWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Request More Videos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

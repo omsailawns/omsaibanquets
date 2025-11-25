@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Sai Banquets - Availability</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button">
+                    <i class="fas fa-calendar-check"></i>
+                    Availability
+                </a>
+                <a href="about.html" class="nav-button">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+                <a href="gallery.html" class="nav-button">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="videos.html" class="nav-button">
+                    <i class="fas fa-video"></i>
+                    Videos
+                </a>
+                <a href="reviews.html" class="nav-button">
+                    <i class="fas fa-star"></i>
+                    Reviews
+                </a>
+                <a href="contact.html" class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Contact
+                </a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-calendar-check"></i>
+                Availability
+            </a>
+            <a href="about.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="gallery.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="videos.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-video"></i>
+                Videos
+            </a>
+            <a href="reviews.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-star"></i>
+                Reviews
+            </a>
+            <a href="contact.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-map-marker-alt"></i>
+                Contact
+            </a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp(); closeMobileMenu()">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Availability Section -->
+    <section class="availability">
+        <div class="container">
+            <h2>Check Availability</h2>
+            <p class="section-subtitle">View our calendars to see available dates for your special event</p>
+
+            <div class="calendar-options">
+                <button class="calendar-tab active" onclick="showCalendar('banquet')">Banquet Hall</button>
+                <button class="calendar-tab" onclick="showCalendar('lawn')">Lawn Area</button>
+            </div>
+
+            <div class="calendar-container banquet-calendar active">
+                <div class="calendar-header">
+                    <button class="nav-btn" onclick="previousMonth('banquet')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 id="currentMonthBanquet">January 2024</h3>
+                    <button class="nav-btn" onclick="nextMonth('banquet')">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="calendar-table">
+                    <div class="calendar-grid" id="banquetCalendar"></div>
+                </div>
+            </div>
+
+            <div class="calendar-container lawn-calendar">
+                <div class="calendar-header">
+                    <button class="nav-btn" onclick="previousMonth('lawn')">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 id="currentMonthLawn">January 2024</h3>
+                    <button class="nav-btn" onclick="nextMonth('lawn')">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="calendar-table">
+                    <div class="calendar-grid" id="lawnCalendar"></div>
+                </div>
+            </div>
+
+            <div class="calendar-legend">
+                <div class="legend-item">
+                    <span class="legend-dot available"></span>
+                    <span>Available</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot booked"></span>
+                    <span>Booked</span>
+                </div>
+            </div>
+
+            <div class="booking-cta">
+                <h3>Ready to Book Your Event?</h3>
+                <p>To book your preferred date, contact us directly on WhatsApp</p>
+                <button class="whatsapp-btn" onclick="contactWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    Contact us on WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

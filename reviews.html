@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Sai Banquets - Reviews</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button">
+                    <i class="fas fa-calendar-check"></i>
+                    Availability
+                </a>
+                <a href="about.html" class="nav-button">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+                <a href="gallery.html" class="nav-button">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="videos.html" class="nav-button">
+                    <i class="fas fa-video"></i>
+                    Videos
+                </a>
+                <a href="reviews.html" class="nav-button">
+                    <i class="fas fa-star"></i>
+                    Reviews
+                </a>
+                <a href="contact.html" class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Contact
+                </a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-calendar-check"></i>
+                Availability
+            </a>
+            <a href="about.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="gallery.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="videos.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-video"></i>
+                Videos
+            </a>
+            <a href="reviews.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-star"></i>
+                Reviews
+            </a>
+            <a href="contact.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-map-marker-alt"></i>
+                Contact
+            </a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp(); closeMobileMenu()">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Guests Say</h2>
+            <p class="testimonials-subtitle">Discover why couples and families choose our elegant banquet hall for their most cherished celebrations</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The venue exceeded our expectations in every way. The staff was incredibly attentive and the ambiance was absolutely perfect for our special day."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <span>Wedding Reception</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"From the elegant decor to the exceptional service, everything was flawless. Our anniversary celebration couldn't have been more memorable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <span>Anniversary Party</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The team made our corporate event seamless and professional. The attention to detail and quality of service was outstanding."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EC</div>
+                        <div class="author-info">
+                            <h4>Emily Chen</h4>
+                            <span>Corporate Event</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-cta">
+                <h3>Ready to create your own unforgettable event?</h3>
+                <button class="book-event-btn" onclick="contactWhatsApp()">
+                    Book Your Event Today
+                </button>
+                <p class="cta-subtitle">Contact us now to discuss your requirements and reserve your date</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

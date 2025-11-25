@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Sai Banquets - Contact</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button">
+                    <i class="fas fa-calendar-check"></i>
+                    Availability
+                </a>
+                <a href="about.html" class="nav-button">
+                    <i class="fas fa-info-circle"></i>
+                    About
+                </a>
+                <a href="gallery.html" class="nav-button">
+                    <i class="fas fa-images"></i>
+                    Gallery
+                </a>
+                <a href="videos.html" class="nav-button">
+                    <i class="fas fa-video"></i>
+                    Videos
+                </a>
+                <a href="reviews.html" class="nav-button">
+                    <i class="fas fa-star"></i>
+                    Reviews
+                </a>
+                <a href="contact.html" class="nav-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Contact
+                </a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav">
+            <a href="availability.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-calendar-check"></i>
+                Availability
+            </a>
+            <a href="about.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-info-circle"></i>
+                About
+            </a>
+            <a href="gallery.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+            <a href="videos.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-video"></i>
+                Videos
+            </a>
+            <a href="reviews.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-star"></i>
+                Reviews
+            </a>
+            <a href="contact.html" class="nav-button" onclick="closeMobileMenu()">
+                <i class="fas fa-map-marker-alt"></i>
+                Contact
+            </a>
+            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp(); closeMobileMenu()">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">Ready to plan your perfect event? Contact us today to discuss your requirements and book our beautiful banquet hall.</p>
+
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h3>Quick Contact</h3>
+
+                    <div class="whatsapp-contact">
+                        <i class="fab fa-whatsapp"></i>
+                        <h4>Chat on WhatsApp</h4>
+                        <p>Instant response guaranteed!</p>
+                        <button class="whatsapp-btn" onclick="contactWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Chat on WhatsApp
+                        </button>
+                    </div>
+
+                    <div class="contact-details">
+                        <h4>Contact Details</h4>
+
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone Number</strong>
+                                <span>+91 9822658766</span>
+                                <span>+91 9854546600</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email Address</strong>
+                                <span>omsailawns@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Operating Hours</strong>
+                                <span>9:00 AM - 9:00 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <span>Om Sai Banquets<br>Baramati-Phaltan road, Baramati, Pune, Maharashtra</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="why-choose">
+                        <h4>Why Choose Us?</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Professional event planning assistance</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Flexible booking options</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Competitive pricing packages</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 customer support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <h3><i class="fas fa-map-marker-alt"></i> Find Our Location</h3>
+
+                    <div class="location-info">
+                        <p>Conveniently located in the heart of the city</p>
+                    </div>
+
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>OM SAI BANQUET HALL</h4>
+                            <p>Baramati-Phaltan road, Baramati, Pune, Maharashtra<br>Click to open in Maps</p>
+                        </div>
+                    </div>
+
+                    <div class="map-features">
+                        <div class="map-feature">
+                            <i class="fas fa-car"></i>
+                            <span>Free parking available</span>
+                        </div>
+                        <div class="map-feature">
+                            <!-- extra feature space -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
