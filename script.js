@@ -15,7 +15,8 @@ const banquetBookedDates = {
     '2024-02': [1, 4, 8, 14, 18, 22, 25, 29],
     '2024-03': [2, 6, 9, 15, 18, 22, 28, 30],
     '2025-07': [5, 12, 18, 25, 30],
-    '2025-08': [1, 3, 8, 15, 22, 29, 19]
+    '2025-08': [1, 3, 8, 15, 22, 29, 19],
+    '2025-11': [1, 3, 8, 15, 22, 29, 19]
 };
 
 // Sample booked dates for lawn area
@@ -220,4 +221,5 @@ function showGallerySection(type) {
     if (activeTab) {
         activeTab.classList.add('active');
     }
+
 }
