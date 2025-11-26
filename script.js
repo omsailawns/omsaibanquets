@@ -15,8 +15,7 @@ const banquetBookedDates = {
     '2024-02': [1, 4, 8, 14, 18, 22, 25, 29],
     '2024-03': [2, 6, 9, 15, 18, 22, 28, 30],
     '2025-07': [5, 12, 18, 25, 30],
-    '2025-08': [1, 3, 8, 15, 22, 29, 19],
-    '2025-11': [1, 3, 8, 15, 22, 29, 19]
+    '2025-08': [1, 3, 8, 15, 22, 29, 19]
 };
 
 // Sample booked dates for lawn area
@@ -221,5 +220,45 @@ function showGallerySection(type) {
     if (activeTab) {
         activeTab.classList.add('active');
     }
+    /**
+ * 1. Mobile Menu Toggle Functionality
+ */
+function toggleMobileMenu() {
+    const mobileNav = document.getElementById('mobileNav');
+    mobileNav.classList.toggle('active');
+    // Optional: Add a class to the body to prevent background scrolling
+    document.body.classList.toggle('menu-open'); 
+}
 
+function closeMobileMenu() {
+    document.getElementById('mobileNav').classList.remove('active');
+    document.body.classList.remove('menu-open');
+}
+
+/**
+ * 2. Sticky Navigation Transition on Scroll
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const topNav = document.getElementById('topNav');
+
+    window.addEventListener('scroll', () => {
+        // Check if the user has scrolled past a certain point (e.g., 50px)
+        if (window.scrollY > 50) {
+            topNav.classList.add('scrolled');
+        } else {
+            topNav.classList.remove('scrolled');
+        }
+    });
+});
+
+/**
+ * 3. WhatsApp Contact Function
+ */
+function contactWhatsApp() {
+    // Replace '919876543210' with the actual WhatsApp number
+    const phoneNumber = '919876543210'; 
+    const message = encodeURIComponent('Hello, I am interested in booking Om Sai Banquets for an event. Could you please share the details?');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+}
 }
