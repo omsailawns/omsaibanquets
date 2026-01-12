@@ -257,11 +257,11 @@ document.addEventListener('DOMContentLoaded', () => {
 function contactWhatsApp() {
     // Replace '919876543210' with the actual WhatsApp number
     const phoneNumber = '919822658766'; 
-    const message = encodeURIComponent('नमस्कार!
-माझ्या आगामी कार्यक्रमासाठी ओम साई बॅन्क्वेट हॉल बुक करण्याबाबत मला चौकशी करायची आहे कृपया उपलब्धता, भाडे, सुविधा आणि बुकिंग प्रक्रिया याबाबत सविस्तर माहिती द्यावी आपला प्रतिसाद अपेक्षित आहे धन्यवाद.');
+    const message = encodeURIComponent('नमस्कार! माझ्या आगामी कार्यक्रमासाठी ओम साई बॅन्क्वेट हॉल बुक करण्याबाबत मला चौकशी करायची आहे कृपया उपलब्धता, भाडे, सुविधा आणि बुकिंग प्रक्रिया याबाबत सविस्तर माहिती द्यावी आपला प्रतिसाद अपेक्षित आहे धन्यवाद.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
 }
 }
+
 
 
