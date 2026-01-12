@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Om Sai Banquets</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Services Page Specific Styles */
+        .services-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: #d4af37;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        /* PDF Download Section */
+        .download-section {
+            background: #2c3e50;
+            color: white;
+            padding: 80px 20px;
+            border-radius: 30px;
+            margin: 40px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+                    .testimonials-cta {
+                display: flex;
+                flex-direction: column; /* Stacks elements vertically */
+                align-items: center;    /* Centers items horizontally */
+                justify-content: center; /* Centers items vertically if there is extra height */
+                text-align: center;      /* Ensures the text lines are centered */
+                padding: 60px 20px;      /* Adds some breathing room top and bottom */
+                width: 100%;             /* Ensures it takes the full width to find the center */
+            }
+
+        /* Optional: Add some spacing between the items */
+        .testimonials-cta h3 {
+            margin-bottom: 15px;
+        }
+
+        .testimonials-cta p {
+            margin-bottom: 25px;
+        }
+
+        .download-btn {
+            background: #d4af37;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: 0.3s;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background: #b8860b;
+            transform: scale(1.05);
+        }
+
+        .pdf-preview {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .services-hero { padding-top: 140px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="top-nav" id="topNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Om Sai Banquets</a>
+            <div class="nav-buttons">
+                <a href="availability.html" class="nav-button">Availability</a>
+                <a href="about.html" class="nav-button">About</a>
+                <a href="services.html" class="nav-button active">Services</a>
+                <a href="gallery.html" class="nav-button">Gallery</a>
+                <a href="reviews.html" class="nav-button">Our Story</a>
+                <a href="contact.html" class="nav-button">Contact</a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()">WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="services-hero">
+        <div class="container">
+            <h1 class="playfair" style="font-size: 3.5rem;">Our Premium Services</h1>
+            <p>Everything you need for a flawless celebration, all under one roof.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Gourmet Catering</h3>
+                <p>From traditional delicacies to international cuisines, our chefs craft menus that delight every palate. Pure veg and multi-cuisine options available.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-holly-berry"></i></div>
+                <h3>Exquisite Decor</h3>
+                <p>Theme-based floral arrangements, majestic stage setups, and ambient lighting tailored to your event's mood and style.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-snowflake"></i></div>
+                <h3>Luxury Ambiance</h3>
+                <p>Fully air-conditioned halls with premium acoustics, elegant chandeliers, and plush seating for ultimate guest comfort.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-user-friends"></i></div>
+                <h3>Expert Management</h3>
+                <p>Our professional uniformed staff and event coordinators ensure every detail is handled with precision and grace.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Uninterrupted Power</h3>
+                <p>Full power backup with heavy-duty generators so your celebration never misses a beat, no matter what.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-parking"></i></div>
+                <h3>Ample Parking</h3>
+                <p>Spacious and secure parking facilities for all your guests, featuring valet services for premium events.</p>
+            </div>
+        </div>
+
+        <section class="download-section">
+            <i class="fas fa-file-pdf" style="font-size: 4rem; color: #d4af37;"></i>
+            <h2 class="playfair">Download Our Full Brochure</h2>
+            <p style="max-width: 600px;">Get detailed information about our wedding packages, menu options, and pricing directly to your device.</p>
+            
+            <a href="om-sai-brochure.pdf" download class="download-btn">
+                <i class="fas fa-cloud-download-alt"></i>
+                Download PDF Brochure (5.2 MB)
+            </a>
+            
+            <p class="pdf-preview">Includes: Menu Lists, Package Pricing, and Venue Layouts</p>
+        </section>
+    </div>
+
+    <div class="testimonials-cta">
+        <h3>Have specific requirements?</h3>
+        <p>We offer customized packages to fit your budget and vision.</p>
+        <button class="book-event-btn" onclick="contactWhatsApp()">Get a Custom Quote</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
