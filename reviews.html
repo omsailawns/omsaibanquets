@@ -3,154 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Sai Banquets - Reviews</title>
+    <title>Our Legacy - Om Sai Banquets</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for the History Page */
+        .history-hero {
+            padding: 100px 20px 60px;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('path-to-your-hall-image.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .story-section {
+            padding: 80px 0;
+            line-height: 1.8;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 4px solid #d4af37; /* Gold accent */
+        }
+
+        .stat-item h2 {
+            font-size: 2.5rem;
+            color: #b8860b;
+            margin-bottom: 10px;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .philosophy-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-list i {
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .philosophy-grid { grid-template-columns: 1fr; }
+            .history-hero { padding-top: 120px; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="top-nav" id="topNav">
         <div class="nav-container">
             <a href="index.html" class="logo">Om Sai Banquets</a>
-
             <div class="nav-buttons">
-                <a href="availability.html" class="nav-button">
-                    <i class="fas fa-calendar-check"></i>
-                    Availability
-                </a>
-                <a href="about.html" class="nav-button">
-                    <i class="fas fa-info-circle"></i>
-                    About
-                </a>
-                <a href="gallery.html" class="nav-button">
-                    <i class="fas fa-images"></i>
-                    Gallery
-                </a>
-                <a href="videos.html" class="nav-button">
-                    <i class="fas fa-video"></i>
-                    Videos
-                </a>
-                <a href="reviews.html" class="nav-button">
-                    <i class="fas fa-star"></i>
-                    Reviews
-                </a>
-                <a href="contact.html" class="nav-button">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Contact
-                </a>
-                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()">
-                    <i class="fab fa-whatsapp"></i>
-                    WhatsApp
-                </a>
+                <a href="availability.html" class="nav-button"><i class="fas fa-calendar-check"></i> Availability</a>
+                <a href="about.html" class="nav-button"><i class="fas fa-info-circle"></i> About</a>
+                <a href="gallery.html" class="nav-button"><i class="fas fa-images"></i> Gallery</a>
+                <a href="videos.html" class="nav-button"><i class="fas fa-video"></i> Videos</a>
+                <a href="reviews.html" class="nav-button active"><i class="fas fa-history"></i> Our Story</a>
+                <a href="contact.html" class="nav-button"><i class="fas fa-map-marker-alt"></i> Contact</a>
+                    <a href="services.html" class="nav-button"><i class="fas fa-images"></i> Services</a>
+                <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
-
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-
-        <div class="mobile-nav" id="mobileNav">
-            <a href="availability.html" class="nav-button" onclick="closeMobileMenu()">
-                <i class="fas fa-calendar-check"></i>
-                Availability
-            </a>
-            <a href="about.html" class="nav-button" onclick="closeMobileMenu()">
-                <i class="fas fa-info-circle"></i>
-                About
-            </a>
-            <a href="gallery.html" class="nav-button" onclick="closeMobileMenu()">
-                <i class="fas fa-images"></i>
-                Gallery
-            </a>
-            <a href="videos.html" class="nav-button" onclick="closeMobileMenu()">
-                <i class="fas fa-video"></i>
-                Videos
-            </a>
-            <a href="reviews.html" class="nav-button" onclick="closeMobileMenu()">
-                <i class="fas fa-star"></i>
-                Reviews
-            </a>
-            <a href="contact.html" class="nav-button" onclick="closeMobileMenu()">
-                <i class="fas fa-map-marker-alt"></i>
-                Contact
-            </a>
-            <a href="#" class="nav-button whatsapp" onclick="contactWhatsApp(); closeMobileMenu()">
-                <i class="fab fa-whatsapp"></i>
-                WhatsApp
-            </a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <header class="history-hero">
         <div class="container">
-            <h2>What Our Guests Say</h2>
-            <p class="testimonials-subtitle">Discover why couples and families choose our elegant banquet hall for their most cherished celebrations</p>
+            <h1 class="playfair">A Legacy of Celebrations</h1>
+            <p class="testimonials-subtitle">Crafting unforgettable memories since 2005</p>
+        </div>
+    </header>
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The venue exceeded our expectations in every way. The staff was incredibly attentive and the ambiance was absolutely perfect for our special day."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
-                        <div class="author-info">
-                            <h4>Sarah Mitchell</h4>
-                            <span>Wedding Reception</span>
-                        </div>
-                    </div>
+    <section class="story-section">
+        <div class="container">
+            <div class="text-center">
+                <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: #555;">
+                    What started as a vision to provide a premium yet soulful event space has grown into one of the city's most trusted landmarks for celebrations. For nearly two decades, <strong>Om Sai Banquets</strong> has been the silent witness to thousands of "I dos," milestone birthdays, and corporate breakthroughs.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2>18+</h2>
+                    <p>Years of Excellence</p>
                 </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"From the elegant decor to the exceptional service, everything was flawless. Our anniversary celebration couldn't have been more memorable."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
-                        <div class="author-info">
-                            <h4>Michael Rodriguez</h4>
-                            <span>Anniversary Party</span>
-                        </div>
-                    </div>
+                <div class="stat-item">
+                    <h2>2,500+</h2>
+                    <p>Successful Events</p>
                 </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The team made our corporate event seamless and professional. The attention to detail and quality of service was outstanding."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">EC</div>
-                        <div class="author-info">
-                            <h4>Emily Chen</h4>
-                            <span>Corporate Event</span>
-                        </div>
-                    </div>
+                <div class="stat-item">
+                    <h2>1M+</h2>
+                    <p>Happy Guests Served</p>
+                </div>
+                <div class="stat-item">
+                    <h2>100%</h2>
+                    <p>Commitment to Respect</p>
                 </div>
             </div>
 
-            <div class="testimonials-cta">
-                <h3>Ready to create your own unforgettable event?</h3>
-                <button class="book-event-btn" onclick="contactWhatsApp()">
-                    Book Your Event Today
-                </button>
-                <p class="cta-subtitle">Contact us now to discuss your requirements and reserve your date</p>
+            <hr class="separator">
+
+            <div class="philosophy-grid">
+                <div class="philosophy-image">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Event Hall Setup" style="width:100%; border-radius: 20px; box-shadow: 20px 20px 0px #f9f5eb;">
+                </div>
+                <div class="philosophy-content">
+                    <h3>From Intimate Gatherings to Grand Galas</h3>
+                    <p>Whether you are planning a cozy engagement ceremony for 50 or a grand wedding reception for 1,000+, we have the expertise to scale our services seamlessly. We believe that no event is "too small" for excellence.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> <strong>Flexible Layouts:</strong> Soundproof partitions and modular seating.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Precision Management:</strong> Every minute of your event is micro-managed by professionals.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>A Culture of Respect:</strong> At Om Sai, every guest is treated with the warmth and dignity of a family member.</li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="philosophy-grid" style="margin-top: 100px;">
+                <div class="philosophy-content" style="order: 2;">
+                    <h3>Our Service Philosophy</h3>
+                    <p>We don't just provide a hall; we provide peace of mind. Our management team is trained in the art of Indian hospitality, ensuring that the host can enjoy the event while we handle the complexities.</p>
+                    <p>Our "Guest-First" approach means:
+                        <ul class="feature-list">
+                            <li><i class="fas fa-heart"></i> Personal attention to elderly guests and children.</li>
+                            <li><i class="fas fa-shield-alt"></i> Transparent pricing with no hidden surprises.</li>
+                            <li><i class="fas fa-clock"></i> Punctuality in service and food presentation.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="philosophy-image" style="order: 1;">
+                    <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=800&q=80" alt="Service Excellence" style="width:100%; border-radius: 20px; box-shadow: -20px 20px 0px #f9f5eb;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-cta" style="background: #fdfaf0; padding: 80px 20px;">
+        <div class="container">
+            <h3>Be a Part of Our History</h3>
+            <p class="cta-subtitle">Let us help you host an event that will be talked about for years to come.</p>
+            <button class="book-event-btn" onclick="contactWhatsApp()" style="padding: 18px 40px; font-size: 1.1rem;">
+                Reserve Your Date Today
+            </button>
         </div>
     </section>
 
