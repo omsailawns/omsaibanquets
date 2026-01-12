@@ -256,9 +256,10 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function contactWhatsApp() {
     // Replace '919876543210' with the actual WhatsApp number
-    const phoneNumber = '919876543210'; 
+    const phoneNumber = '919822658766'; 
     const message = encodeURIComponent('Hello, I am interested in booking Om Sai Banquets for an event. Could you please share the details?');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
 }
 }
+
