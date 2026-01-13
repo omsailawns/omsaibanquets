@@ -1195,6 +1195,24 @@ body {
     .gallery-section.active {
         display: block; 
     }
+    .logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #fff; /* Or your preferred text color */
+}
+
+.logo i {
+    font-size: 2rem; /* Makes the symbol slightly larger than the text */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover i {
+    transform: scale(1.1) rotate(5deg); /* Adds a nice effect when hovered */
+}
 }
 
 
@@ -1225,3 +1243,4 @@ body {
     70% { box-shadow: 0 0 0 15px rgba(139, 69, 19, 0); }
     100% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0); }
 }
+
