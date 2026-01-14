@@ -127,7 +127,7 @@ function contactWhatsApp(type = 'banquet') {
     const venue = type === 'banquet' ? 'Banquet Hall' : 'Lawn Area';
     const phoneNumber = '919822658766';
     const message = encodeURIComponent(
-        `Hi! I would like to inquire about booking the ${venue} at Om Sai Banquets for my event.`
+        'नमस्कार! माझ्या आगामी कार्यक्रमासाठी ओम साई बॅन्क्वेट हॉल बुक करण्याबाबत मला चौकशी करायची आहे कृपया उपलब्धता, भाडे, सुविधा आणि बुकिंग प्रक्रिया याबाबत सविस्तर माहिती द्यावी आपला प्रतिसाद अपेक्षित आहे धन्यवाद.'
     );
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappURL, '_blank');
@@ -262,6 +262,7 @@ function contactWhatsApp() {
     window.open(whatsappUrl, '_blank');
 }
 }
+
 
 
 
