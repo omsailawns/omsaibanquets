@@ -9,6 +9,7 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #333;
+    padding-top: 110px;
 }
 
 /* 🟢 NEW GLOBAL TRANSITIONS & HOVER ENHANCEMENTS 🟢 */
@@ -301,8 +302,9 @@ body {
 
 /* Availability Section */
 .availability {
-    padding: 80px 0;
+    padding: 120px 0;
     background: #f8f9fa;
+    text-align: center;
 }
 
 .availability h2 {
@@ -1213,6 +1215,14 @@ body {
 .logo:hover i {
     transform: scale(1.1) rotate(5deg); /* Adds a nice effect when hovered */
 }
+body {
+    padding-top: 110px; /* This creates a default 'safety zone' for your header */
+}
+
+/* On pages with a Hero section (like Services), you can reset it */
+.services-hero, .history-hero {
+    margin-top: -80px; /* Pulls the hero back up so it meets the header perfectly */
+}
 }
 
 
@@ -1243,4 +1253,3 @@ body {
     70% { box-shadow: 0 0 0 15px rgba(139, 69, 19, 0); }
     100% { box-shadow: 0 0 0 0 rgba(139, 69, 19, 0); }
 }
-
