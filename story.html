@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Om Sai Banquet Hall</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f6f1ea;
+    --card:#ffffff;
+    --gold:#C5A059;
+    --text:#3a3a3a;
+    --muted:#8c8c8c;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* NAVBAR */
+.top-nav{
+    position:fixed;
+    top:12px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    z-index:999;
+}
+
+.nav-pill{
+    display:flex;
+    gap:18px;
+    background:rgba(255,255,255,0.7);
+    padding:10px 18px;
+    border-radius:40px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    overflow-x:auto;
+    white-space:nowrap;
+}
+.nav-pill::-webkit-scrollbar{display:none;}
+
+.nav-pill a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+}
+.nav-pill a:hover{color:var(--gold);}
+
+/* HERO */
+.hero{
+    margin-top:70px;
+    height:36vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    color:var(--gold);
+    font-size:2.2rem;
+    text-shadow:0 2px 6px rgba(0,0,0,0.4);
+}
+
+.quote{
+    margin-top:6px;
+    font-size:14px;
+    color:#f1f1f1;
+    font-style:italic;
+}
+
+/* STORY SECTION */
+.story{
+    padding:30px 18px 50px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.story h2{
+    font-family:'Playfair Display',serif;
+    color:var(--gold);
+    margin-bottom:12px;
+}
+
+.story p{
+    margin-bottom:16px;
+}
+
+/* TIMELINE STYLE */
+.timeline{
+    margin-top:25px;
+}
+
+.step{
+    background:var(--card);
+    padding:16px;
+    border-radius:12px;
+    margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.05);
+}
+
+.step h3{
+    color:var(--gold);
+    margin-bottom:6px;
+    font-family:'Playfair Display',serif;
+}
+
+.step p{
+    font-size:14px;
+    color:var(--muted);
+}
+
+/* SIGNATURE */
+.signature{
+    margin-top:20px;
+    text-align:center;
+    font-style:italic;
+    color:var(--gold);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav-pill{width:92%;gap:14px;}
+.hero h1{font-size:1.9rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="top-nav">
+<nav class="nav-pill">
+<a href="availability.html">Availability</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="videos.html">Videos</a>
+<a href="story.html">Our Story</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Our Story</h1>
+<p class="quote">"Every celebration has a story. Ours began with a dream."</p>
+</section>
+
+<!-- STORY CONTENT -->
+<section class="story">
+
+<h2>How It All Began</h2>
+<p>
+Om Sai Banquet Hall was born from a vision to create a place where celebrations
+become unforgettable memories. What started as a small dream has grown into
+one of the most trusted venues for weddings, receptions and special events.
+</p>
+
+<h2>Our Journey</h2>
+<p>
+With dedication, passion and a commitment to excellence, we transformed our
+space into a luxurious venue that blends tradition with modern elegance.
+Every detail — from décor to hospitality — reflects our love for celebrations.
+</p>
+
+<div class="timeline">
+
+<div class="step">
+<h3>The Beginning</h3>
+<p>Started with a dream to create a beautiful celebration space for families.</p>
+</div>
+
+<div class="step">
+<h3>Growing with Trust</h3>
+<p>Hosted hundreds of weddings and events, earning love and trust from clients.</p>
+</div>
+
+<div class="step">
+<h3>Today</h3>
+<p>A premium banquet hall known for elegance, comfort and memorable celebrations.</p>
+</div>
+
+</div>
+
+<p class="signature">
+"Creating memories that last a lifetime."
+</p>
+
+</section>
+
+</body>
+</html>

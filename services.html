@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Om Sai Banquet Hall</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f6f1ea;
+    --card:#ffffff;
+    --gold:#C5A059;
+    --text:#3a3a3a;
+    --muted:#8c8c8c;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* NAVBAR */
+.top-nav{
+    position:fixed;
+    top:12px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    z-index:999;
+}
+
+.nav-pill{
+    display:flex;
+    gap:18px;
+    background:rgba(255,255,255,0.7);
+    padding:10px 18px;
+    border-radius:40px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    overflow-x:auto;
+    white-space:nowrap;
+}
+.nav-pill::-webkit-scrollbar{display:none;}
+
+.nav-pill a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+}
+.nav-pill a:hover{color:var(--gold);}
+
+/* HERO */
+.hero{
+    margin-top:70px;
+    height:36vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('dinning 7.jpeg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    color:var(--gold);
+    font-size:2.2rem;
+    text-shadow:0 2px 6px rgba(0,0,0,0.4);
+}
+
+.quote{
+    margin-top:6px;
+    font-size:14px;
+    color:#f1f1f1;
+    font-style:italic;
+}
+
+/* SERVICES SECTION */
+.services{
+    padding:30px 16px 50px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+    color:var(--gold);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.05);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:var(--gold);
+    margin-bottom:8px;
+    font-family:'Playfair Display',serif;
+}
+
+.card p{
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.6;
+}
+
+/* BROCHURE SECTION */
+.brochure-section{
+    margin-top:40px;
+    text-align:center;
+}
+
+.brochure-text{
+    color:var(--muted);
+    margin-bottom:16px;
+}
+
+.download-btn{
+    display:inline-block;
+    padding:12px 26px;
+    background:var(--gold);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.download-btn:hover{
+    opacity:0.85;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav-pill{width:92%;gap:14px;}
+.hero h1{font-size:1.9rem;}
+.grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="top-nav">
+<nav class="nav-pill">
+<a href="availability.html">Availability</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="videos.html">Videos</a>
+<a href="story.html">Our Story</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Our Services</h1>
+<p class="quote">"Designed with elegance. Delivered with perfection."</p>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+
+<h2 class="section-title">What We Offer</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Wedding Celebrations</h3>
+<p>Grand weddings with luxury décor, lighting and full event coordination.</p>
+</div>
+
+<div class="card">
+<h3>Catering Services</h3>
+<p>Delicious multi-cuisine menus prepared in our hygienic modern kitchen.</p>
+</div>
+
+<div class="card">
+<h3>Decoration & Styling</h3>
+<p>Theme-based floral decoration and premium stage arrangements.</p>
+</div>
+
+<div class="card">
+<h3>Corporate Events</h3>
+<p>Professional setup for meetings, conferences and seminars.</p>
+</div>
+
+<div class="card">
+<h3>Private Parties</h3>
+<p>Birthdays, anniversaries and family celebrations made memorable.</p>
+</div>
+
+<div class="card">
+<h3>Valet & Parking</h3>
+<p>Spacious parking area with smooth entry and exit management.</p>
+</div>
+
+</div>
+
+<!-- BROCHURE DOWNLOAD -->
+<div class="brochure-section">
+
+<h2 class="section-title">Download Our Brochure</h2>
+<p class="brochure-text">
+Get complete details about our banquet hall, services, pricing and packages.
+</p>
+
+<a href="om-sai-brochure.pdf" download class="download-btn">
+Download Brochure
+</a>
+
+</div>
+
+</section>
+
+</body>
+</html>

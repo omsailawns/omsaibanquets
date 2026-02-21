@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Videos | Om Sai Banquet Hall</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f6f1ea;
+    --card:#ffffff;
+    --gold:#C5A059;
+    --text:#3a3a3a;
+    --muted:#8c8c8c;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* NAVBAR */
+.top-nav{
+    position:fixed;
+    top:12px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    z-index:999;
+}
+
+.nav-pill{
+    display:flex;
+    gap:18px;
+    background:rgba(255,255,255,0.7);
+    padding:10px 18px;
+    border-radius:40px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    overflow-x:auto;
+    white-space:nowrap;
+}
+.nav-pill::-webkit-scrollbar{display:none;}
+
+.nav-pill a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+}
+.nav-pill a:hover{color:var(--gold);}
+
+/* HERO */
+.hero{
+    margin-top:70px;
+    height:36vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    color:var(--gold);
+    font-size:2.2rem;
+    text-shadow:0 2px 6px rgba(0,0,0,0.4);
+}
+
+.quote{
+    margin-top:6px;
+    font-size:14px;
+    color:#f1f1f1;
+    font-style:italic;
+}
+
+/* VIDEO SECTION */
+.videos{
+    padding:25px 14px 40px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    margin:18px 0 10px;
+    color:var(--gold);
+    font-family:'Playfair Display',serif;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:12px;
+}
+
+.video-card{
+    background:var(--card);
+    padding:10px;
+    border-radius:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.05);
+}
+
+video{
+    width:100%;
+    border-radius:8px;
+    background:black;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav-pill{width:92%;gap:14px;}
+.hero h1{font-size:1.9rem;}
+.grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="top-nav">
+<nav class="nav-pill">
+<a href="availability.html">Availability</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="videos.html">Videos</a>
+<a href="story.html">Our Story</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Banquet Videos</h1>
+<p class="quote">"Relive the moments. Feel the celebration."</p>
+</section>
+
+<!-- VIDEO CONTENT -->
+<section class="videos">
+
+<h2 class="section-title">Wedding Highlights</h2>
+<div class="grid">
+<div class="video-card">
+<video controls src="banquethall.mp4"></video>
+</div>
+<div class="video-card">
+<video controls src="videos/wedding2.mp4"></video>
+</div>
+</div>
+
+
+</section>
+
+</body>
+</html>
