@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Om Sai Events | Banquet & Lawns</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --gold:#C5A059;
+    --dark:#1a1a1a;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--dark);
+    color:var(--white);
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:absolute;
+    width:100%;
+    z-index:100;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:22px;
+    color:var(--gold);
+}
+
+.contact-num{
+    font-size:14px;
+}
+
+/* HERO SPLIT */
+.hero{
+    display:flex;
+    height:100vh;
+}
+
+/* SIDE COMMON */
+.side{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    transition:0.4s;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+}
+
+.side::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.side *{
+    position:relative;
+    z-index:2;
+}
+
+.side:hover{
+    flex:1.1;
+}
+
+/* BANQUET BACKGROUND */
+.banquet{
+    background-image:url('main3.jpeg');
+    border-right:1px solid var(--gold);
+}
+
+/* LAWNS BACKGROUND (Better Clear Outdoor Image) */
+.lawns{
+    background-image:url('mainlawns1.jpeg');
+}
+
+/* TEXT */
+.side h2{
+    font-family:'Playfair Display',serif;
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.side p{
+    font-size:1.1rem;
+    margin-bottom:18px;
+}
+
+.btn{
+    padding:10px 24px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    border-radius:25px;
+    font-size:13px;
+}
+
+.btn:hover{
+    background:var(--gold);
+    color:black;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+}
+
+.side{
+    height:50vh;
+}
+
+.side h2{
+    font-size:2rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">OM SAI EVENTS</div>
+<div class="contact-num">📞 +91 98226 58766</div>
+</nav>
+
+<section class="hero">
+
+<a href="availability.html" class="side banquet">
+<h2>Om Sai Banquet Hall</h2>
+<p>Luxury • Elegance • Royal Experience</p>
+<span class="btn">Explore Indoor</span>
+</a>
+
+<a href="lawns.html" class="side lawns">
+<h2>Om Sai Lawns</h2>
+<p>Nature • Open Air • Grand Celebrations</p>
+<span class="btn">Explore Outdoor</span>
+</a>
+
+</section>
+
+</body>
+</html>

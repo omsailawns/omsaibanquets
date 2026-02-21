@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banquet Availability | Om Sai Events</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f6f1ea;
+    --card:#ffffff;
+    --gold:#C5A059;
+    --text:#3a3a3a;
+    --muted:#8c8c8c;
+    --green:#6bbf73;
+    --red:#d46a6a;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* ===== NAVBAR ===== */
+.top-nav{
+    position:fixed;
+    top:12px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    z-index:999;
+}
+
+.nav-pill{
+    display:flex;
+    gap:18px;
+    background:rgba(255,255,255,0.7);
+    padding:10px 18px;
+    border-radius:40px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    overflow-x:auto;
+    white-space:nowrap;
+}
+.nav-pill::-webkit-scrollbar{display:none;}
+
+.nav-pill a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+}
+.nav-pill a:hover{color:var(--gold);}
+
+/* ===== HERO (Same as About Page) ===== */
+.hero{
+    margin-top:70px;
+    height:35vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('dinning 3.jpeg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    color:var(--gold);
+    font-size:2.1rem;
+    text-shadow:0 2px 6px rgba(0,0,0,0.4);
+}
+
+/* ===== CALENDAR ===== */
+.calendar-section{
+    padding:25px 12px 40px;
+    display:flex;
+    justify-content:center;
+}
+
+.calendar{
+    width:100%;
+    max-width:360px;
+    background:var(--card);
+    border-radius:14px;
+    padding:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.05);
+}
+
+.month{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+}
+
+.month button{
+    background:none;
+    border:none;
+    color:var(--text);
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* Weekdays */
+.weekdays{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    text-align:center;
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:6px;
+}
+
+/* Days */
+.days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:6px;
+}
+
+.day{
+    padding:9px;
+    text-align:center;
+    border-radius:6px;
+    font-size:13px;
+}
+
+.available{background:rgba(107,191,115,0.25);}
+.booked{background:rgba(212,106,106,0.25);}
+.today{border:1px solid var(--gold);}
+
+.legend{
+    margin-top:12px;
+    font-size:12px;
+    display:flex;
+    justify-content:space-between;
+    color:var(--muted);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav-pill{width:92%;gap:14px;}
+.nav-pill a{font-size:13px;}
+.hero h1{font-size:1.8rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="top-nav">
+<nav class="nav-pill">
+<a href="availability.html">Availability</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="videos.html">Videos</a>
+<a href="story.html">Our Story</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Banquet Availability</h1>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar-section">
+<div class="calendar">
+
+<div class="month">
+<button onclick="changeMonth(-1)">◀</button>
+<h3 id="monthYear"></h3>
+<button onclick="changeMonth(1)">▶</button>
+</div>
+
+<div class="weekdays">
+<div>Sun</div><div>Mon</div><div>Tue</div>
+<div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+</div>
+
+<div class="days" id="calendarDays"></div>
+
+<div class="legend">
+<span style="color:#6bbf73;">■ Available</span>
+<span style="color:#d46a6a;">■ Booked</span>
+</div>
+
+</div>
+</section>
+
+<script>
+const bookedDates=["2026-02-10","2026-02-15","2026-02-22","2026-02-25"];
+let currentDate=new Date();
+
+function renderCalendar(){
+const container=document.getElementById("calendarDays");
+container.innerHTML="";
+const year=currentDate.getFullYear();
+const month=currentDate.getMonth();
+
+document.getElementById("monthYear").innerText=
+currentDate.toLocaleString("default",{month:"long",year:"numeric"});
+
+const firstDay=new Date(year,month,1).getDay();
+const totalDays=new Date(year,month+1,0).getDate();
+
+for(let i=0;i<firstDay;i++) container.innerHTML+="<div></div>";
+
+for(let d=1;d<=totalDays;d++){
+const full=`${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+let cls=bookedDates.includes(full)?"booked":"available";
+
+const today=new Date();
+const isToday=d===today.getDate()&&month===today.getMonth()&&year===today.getFullYear();
+
+container.innerHTML+=`<div class="day ${cls} ${isToday?'today':''}">${d}</div>`;
+}
+}
+
+function changeMonth(step){
+currentDate.setMonth(currentDate.getMonth()+step);
+renderCalendar();
+}
+
+renderCalendar();
+</script>
+
+</body>
+</html>

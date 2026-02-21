@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Om Sai Lawns</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f6f1ea;
+    --gold:#C5A059;
+    --text:#3a3a3a;
+    --card:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* NAVBAR */
+.top-nav{
+    position:fixed;
+    top:12px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    z-index:999;
+}
+
+.nav-pill{
+    display:flex;
+    gap:18px;
+    background:rgba(255,255,255,0.7);
+    padding:10px 18px;
+    border-radius:40px;
+    backdrop-filter:blur(6px);
+    box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    overflow-x:auto;
+    white-space:nowrap;
+}
+.nav-pill::-webkit-scrollbar{display:none;}
+
+.nav-pill a{
+    color:var(--text);
+    text-decoration:none;
+    font-size:14px;
+}
+.nav-pill a:hover{color:var(--gold);}
+
+/* HERO */
+.hero{
+    margin-top:70px;
+    height:34vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('lawns5.jpeg');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    color:var(--gold);
+    font-size:2rem;
+}
+
+.quote{
+    color:#eee;
+    font-style:italic;
+    font-size:14px;
+}
+
+/* STORY */
+.story{
+    padding:30px 18px 60px;
+    max-width:900px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.story h2{
+    color:var(--gold);
+    margin-bottom:8px;
+}
+
+/* TIMELINE */
+.timeline{
+    margin-top:20px;
+}
+
+.step{
+    background:var(--card);
+    padding:16px;
+    border-radius:12px;
+    margin-bottom:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.05);
+}
+
+.step h3{
+    color:var(--gold);
+    margin-bottom:5px;
+}
+
+.signature{
+    margin-top:20px;
+    text-align:center;
+    font-style:italic;
+    color:var(--gold);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.nav-pill{width:92%;gap:14px;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="top-nav">
+<nav class="nav-pill">
+<a href="lawns-availability.html">Availability</a>
+<a href="lawns-about.html">About</a>
+<a href="lawns-gallery.html">Gallery</a>
+<a href="lawns-videos.html">Videos</a>
+<a href="lawns-story.html">Our Story</a>
+<a href="lawns-services.html">Services</a>
+<a href="lawns-contact.html">Contact</a>
+</nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Our Story</h1>
+<p class="quote">"Where nature meets celebration."</p>
+</section>
+
+<!-- STORY CONTENT -->
+<section class="story">
+
+<h2>How Our Journey Began</h2>
+<p>
+Om Sai Lawns was created with a dream to offer a beautiful open-air venue
+where people could celebrate their most precious moments surrounded by nature.
+From small gatherings to grand weddings, every celebration here becomes magical.
+</p>
+
+<h2>Our Growth</h2>
+<p>
+With years of dedication and trust from our clients, we expanded our lawns
+into a premium outdoor venue known for spacious setups, elegant decoration,
+and unforgettable night celebrations under the stars.
+</p>
+
+<div class="timeline">
+
+<div class="step">
+<h3>The Beginning</h3>
+<p>Started as a simple open space for community celebrations.</p>
+</div>
+
+<div class="step">
+<h3>Growing with Trust</h3>
+<p>Hosted hundreds of weddings and events with love and dedication.</p>
+</div>
+
+<div class="step">
+<h3>Today</h3>
+<p>A premium outdoor venue for grand celebrations and weddings.</p>
+</div>
+
+</div>
+
+<p class="signature">
+"Celebrating moments under the open sky."
+</p>
+
+</section>
+
+</body>
+</html>
